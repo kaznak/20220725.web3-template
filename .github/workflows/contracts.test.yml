@@ -1,6 +1,11 @@
 name: test
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.gitmodules'
+      - 'contracts/**'
 
 env:
   FOUNDRY_PROFILE: ci
@@ -24,11 +29,13 @@ jobs:
 
       - name: Run Forge build
         run: |
+          cd contracts/
           forge --version
           forge build --sizes
         id: build
 
       - name: Run Forge tests
         run: |
+          cd contracts/
           forge test -vvv
         id: test
