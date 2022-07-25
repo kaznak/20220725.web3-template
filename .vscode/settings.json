@@ -1,4 +1,8 @@
 {
   "solidity.packageDefaultDependenciesContractsDirectory": "contracts/src",
-  "solidity.packageDefaultDependenciesDirectory": "contracts/lib"
+  "solidity.packageDefaultDependenciesDirectory": "contracts/lib",
+  "cSpell.words": [
+    "Kazutaka",
+    "Nakamura"
+  ]
 }
